@@ -11,7 +11,7 @@ type HighlightedRosterTextareaProps = {
 };
 
 const SHARED_TEXT_CLASSES =
-  "whitespace-pre-wrap break-words rounded-lg border px-2.5 py-2 font-mono text-sm leading-relaxed";
+  "whitespace-pre-wrap break-words rounded-lg border px-2.5 py-2 font-mono text-base leading-relaxed md:text-sm";
 
 export function HighlightedRosterTextarea({
   value,
