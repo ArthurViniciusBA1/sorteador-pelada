@@ -1,0 +1,97 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.11/schema.json",
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  },
+  "files": {
+    "ignoreUnknown": false
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "always",
+      "trailingCommas": "all",
+      "arrowParentheses": "always"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "recommended",
+
+      "correctness": {
+        "noUnusedVariables": "error",
+        "noUnusedImports": "error",
+        "useExhaustiveDependencies": "error",
+        "useHookAtTopLevel": "error",
+        "noUndeclaredVariables": "error",
+        "noConstAssign": "error",
+        "noUnreachable": "error"
+      },
+
+      "complexity": {
+        "noUselessEmptyExport": "error",
+        "noStaticOnlyClass": "off"
+      },
+
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noDoubleEquals": "error",
+        "noDebugger": "error",
+        "noAsyncPromiseExecutor": "error",
+        "noMisleadingInstantiator": "error",
+        "noConsole": {
+          "level": "error",
+          "options": {
+            "allow": ["error", "warn", "info"]
+          }
+        }
+      },
+
+      "a11y": {
+        "noAutofocus": "error",
+        "useKeyWithClickEvents": "error",
+        "useButtonType": "error",
+        "useAltText": "error",
+        "useValidAnchor": "error",
+        "noSvgWithoutTitle": "error"
+      },
+
+      "security": {
+        "noDangerouslySetInnerHtml": "warn",
+        "noGlobalEval": "warn"
+      },
+
+      "style": {
+        "useNamingConvention": "off",
+        "useTemplate": "warn",
+        "noNegationElse": "warn"
+      },
+
+      "nursery": {
+        "noFloatingPromises": "error"
+      }
+    }
+  }
+}
