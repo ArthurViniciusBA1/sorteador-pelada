@@ -61,11 +61,13 @@ export function SavedDrawView({ id }: { id: string }) {
   if (draw === null) {
     return (
       <div className="mx-auto flex h-dvh w-full max-w-3xl flex-col overflow-hidden">
-        <header className="shrink-0 bg-primary px-4 py-4 text-primary-foreground">
-          <h1 className="text-center font-heading text-xl font-bold tracking-tight">
-            Sorteio não encontrado
-          </h1>
-        </header>
+        <div className="shrink-0 px-4 pt-4">
+          <header className="rounded-lg bg-primary/70 px-4 py-4 text-primary-foreground backdrop-blur-xl">
+            <h1 className="text-center font-heading text-xl font-bold tracking-tight">
+              Sorteio não encontrado
+            </h1>
+          </header>
+        </div>
         <div className="flex min-h-0 flex-1 flex-col justify-center gap-3 px-4">
           <p className="text-center text-sm text-muted-foreground">
             Esse sorteio não existe mais neste navegador.
@@ -83,11 +85,13 @@ export function SavedDrawView({ id }: { id: string }) {
 
   return (
     <div className="mx-auto flex h-dvh w-full max-w-3xl flex-col overflow-hidden">
-      <header className="shrink-0 bg-primary px-4 py-4 text-primary-foreground">
-        <h1 className="text-center font-heading text-xl font-bold tracking-tight">
-          Sorteio de {formatSavedAt(draw.savedAt)}
-        </h1>
-      </header>
+      <div className="shrink-0 px-4 pt-4">
+        <header className="rounded-lg bg-primary/70 px-4 py-4 text-primary-foreground backdrop-blur-xl">
+          <h1 className="text-center font-heading text-xl font-bold tracking-tight">
+            Sorteio de {formatSavedAt(draw.savedAt)}
+          </h1>
+        </header>
+      </div>
 
       <div className="flex min-h-0 flex-1 flex-col gap-3 px-4 pt-3 pb-3">
         <ResultsDisplay

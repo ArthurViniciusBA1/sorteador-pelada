@@ -25,21 +25,23 @@ export function SorteadorWizard() {
 
   return (
     <div className="mx-auto flex h-dvh w-full max-w-3xl flex-col overflow-hidden">
-      <header className="relative shrink-0 bg-primary px-4 py-4 text-primary-foreground">
-        <Button
-          asChild
-          variant="ghost"
-          size="icon"
-          className="absolute top-1/2 left-2 -translate-y-1/2 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-        >
-          <Link href="/" aria-label="Voltar ao início">
-            <House className="size-4" />
-          </Link>
-        </Button>
-        <h1 className="text-center font-heading text-xl font-bold tracking-tight">
-          {STEP_TITLES[state.step]}
-        </h1>
-      </header>
+      <div className="shrink-0 px-4 pt-4">
+        <header className="relative rounded-lg bg-primary/70 px-4 py-4 text-primary-foreground backdrop-blur-xl">
+          <Button
+            asChild
+            variant="ghost"
+            size="icon"
+            className="absolute top-1/2 left-2 -translate-y-1/2 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+          >
+            <Link href="/" aria-label="Voltar ao início">
+              <House className="size-4" />
+            </Link>
+          </Button>
+          <h1 className="text-center font-heading text-xl font-bold tracking-tight">
+            {STEP_TITLES[state.step]}
+          </h1>
+        </header>
+      </div>
 
       <div className="flex min-h-0 flex-1 flex-col px-4 pt-3 pb-3">
         {state.step === "paste" && (
