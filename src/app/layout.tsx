@@ -23,7 +23,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "SorteioFut",
-  description: "Sorteador de times para peladas de futebol amador",
+  description: "Sorteador pra peladas de baixo nível",
 };
 
 export const viewport: Viewport = {
